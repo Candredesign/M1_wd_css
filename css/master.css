@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "decovar";
+  font-style: normal;
+  font-weight: 400;
+  src: url("font/DecovarAlpha-VF.subset.ttf");
+}
+
+body {
+    background-image: url(img/background_white_pattern.jpg);
+    background-attachment: fixed;
+}
+
+/* header */
+header{
+  display: flex;
+  justify-content: space-between;
+  height:100px;
+}
+
+.logo{
+  display: flex;
+  height: fit-content;
+}
+
+#baselinelogo{
+font-family: "decovar";
+font-size: 0.8rem;
+letter-spacing: .1rem;
+font-weight: 100;
+color: #306000;
+margin: 0.3em 0px 0px 1em;
+}
+
+/* Section 2 */
+
+#titre{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+
+.date {
+  transform: rotate(-90deg);
+}
+
+.paragraphe{
+  margin: 0;
+  padding: 0;
+}
+
+.titre{
+  margin : 0;
+  padding-bottom: 20px;
+}
+
+.titreparagraphe{
+  width: 400px;
+  height: fit-content;
+  margin-bottom: 5px;
+}
+
+.fleche{
+  height: fit-content;
+  padding-top: 20px;
+}
+
+
+h1{
+  font-family: "decovar";
+  font-size: 4rem;
+  letter-spacing: .3rem;
+  font-weight: 100;
+  color: #306000;
+}
+
+
+p{
+  font-family: "decovar";
+  font-size: 0.8rem;
+  letter-spacing: .1rem;
+  font-weight: 100;
+  color: #306000;
+}
+
+
+
+
+
+
+
+#lettre{
+  display:block;
+  min-height:300px;
+  width:100%;
+  border-radius:4px;
+}
+
+#lettre a{
+  display:block;
+  float:left;
+  width:33.33%;
+  text-decoration:none;
+  text-align:center;
+  padding:5px 0;
+  color:white;
+  background:black;
+}
+
+a{
+  display:block;
+  float:left;
+  width:25%;
+  text-decoration:none;
+  text-align:center;
+  padding:5px 0;
+  color:white;
+  background:black;
+}
+
+div{
+ display:block;
+ float:left;
+ height:100px;
+ width:100px;
+ margin:50px;
+ -webkit-transition:all .5s linear;
+ -moz-transition:all .5s linear;
+ -o-transition:all .5s linear;
+ -ms-transition:all .5s linear;
+ transition:all .5s linear;
+ margin-top:20px;
+ text-align: center;
+ font-size: 20px;
+}
+
+
+a:focus[data-filter]{
+    opacity:.8;
+     outline:none;
+}
+
+
+
+div[data-filter="voyelle"]{
+  background:#FF5733;
+
+}
+
+div[data-filter="consonne"]{
+  background:#FFC300;
+}
+
+a[data-filter="voyelle"]:focus ~ div:not([data-filter="voyelle"]){
+  width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+
+}
+
+
+a[data-filter="consonne"]:focus ~ div:not([data-filter="consonne"]){
+    width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+
+}
