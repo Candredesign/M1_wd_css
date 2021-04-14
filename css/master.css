@@ -37,8 +37,8 @@ margin: 0.3em 0px 0px 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 17vh;
-  margin-bottom: 17vh;
+  margin-top: 13vh;
+  margin-bottom: 13vh;
 }
 
 .date {
@@ -85,7 +85,7 @@ p{
 }
 
 
-/* Section 3 */
+/* Catégories */
 
 
 #categories{
@@ -93,7 +93,7 @@ p{
   justify-content: center;
   align-items: center;
   margin-top: 20vh;
-  margin-bottom: 20vh;
+  margin-bottom: 20px;
 }
 
 .mal-maux{
@@ -115,44 +115,73 @@ margin:0;
 }
 
 
+/* filter */
+#filter{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10vh;
+}
+
+.filter-link{
+  font-family: "decovar";
+  font-size: 0.8rem;
+  letter-spacing: .1rem;
+  font-weight: 100;
+  color: #306000;
+  text-decoration:none;
+  text-align:center;
+  padding:8px 8px;
+  background-color: transparent;
+  border:1px solid #306000;
+  border-radius: 50px;
+  margin: 5px;
+}
 
 
 
-
-
-
-/* lettres de l'alphabet */
-
+/* lettres de l'alphabet voyelle */
 
 #lettre{
   display:flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  min-height:300px;
-  width:100%;
-  border-radius:50px;
 }
 
-#lettre a{
+h3{
+  font-family: "Decovar Alpha";
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  font-weight: 50;
+  color: #306000;
+  text-align: left;
+  margin: 5px;
+  margin-top: -15px;
+}
+
+.images-lettres{
+  width: 200px;
+}
+
+.fleche-lettres{
+  width:30px;
+  margin-left:80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#lettre p{
   font-family: "decovar";
-  display:block;
-  float:left;
-  width:33.33%;
-  text-decoration:none;
-  text-align:center;
-  padding:5px 0;
-  color:#306000;
+  font-size: 0.8rem;
+  letter-spacing: .1rem;
+  font-weight: 100;
+  color: #306000;
+  text-align: left;
+  margin: 0;
 }
 
-a{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width:25%;
-  text-decoration:none;
-  text-align:center;
-  padding:5px 0;
-}
 
 div{
   display:flex;
@@ -175,20 +204,25 @@ div{
 
 
 a:focus[data-filter]{
-    opacity:.8;
+    opacity:.2;
      outline:none;
 }
 
 
 
 div[data-filter="voyelle"]{
-  background:#FF5733;
+  display: flex;
+  justify-content: flex-start;
+  border:2px solid rgba(48, 96, 0, .2);
+  border-radius: 500px;
+  height: fit-content;
+  width:200px;
+  padding:20px;
+  padding-top: 35px;
 
 }
 
-div[data-filter="consonne"]{
-  background:#FFC300;
-}
+
 
 a[data-filter="voyelle"]:focus ~ div:not([data-filter="voyelle"]){
   width:0;
@@ -209,8 +243,23 @@ a[data-filter="consonne"]:focus ~ div:not([data-filter="consonne"]){
 
 }
 
-.filter-link{
-  background-color: yellow;
-  display: block;
-  max-width: 100px;
+
+/* lettres de l'alphabet consonne */
+
+div[data-filter="consonne"]{
+  display: flex;
+  justify-content: flex-start;
+  border:2px solid rgba(48, 96, 0, .2);
+  border-radius: 500px;
+  height: fit-content;
+  width:200px;
+  padding:20px;
+  padding-top: 35px;
+}
+
+/* Section 2 */
+
+#attention {
+  display: flex;
+  align-items: center;
 }
