@@ -9,6 +9,11 @@ html{
   src: url("font/DecovarAlpha-VF.subset.ttf");
 }
 
+:root{
+	--main-color: #306000;
+	--secondary-color: #F4EFE5;
+}
+
 body {
     background-image: url(img/background_white_pattern.jpg);
     background-attachment: fixed;
@@ -17,24 +22,24 @@ body {
 
 
 /* header */
-header{
+header {
   display: flex;
   justify-content: space-between;
   height:100px;
   margin-top: 40px;
 }
 
-.logo{
+.logo {
   display: flex;
   height: fit-content;
 }
 
-#baselinelogo{
+#baselinelogo {
 font-family: "decovar";
 font-size: 0.8rem;
 letter-spacing: .1rem;
 font-weight: 100;
-color: #306000;
+color: var(--main-color);
 margin: 0.3em 0px 0px 1em;
 }
 
@@ -44,7 +49,7 @@ margin: 0.3em 0px 0px 1em;
 .logo path{
   fill: transparent;
   stroke-width: 0.7;
-  stroke: #306000;
+  stroke: var(--main-color);
   stroke-dasharray: 45;
   stroke-dashoffset: 45;
   animation-duration : 2s;
@@ -69,12 +74,20 @@ margin: 0.3em 0px 0px 1em;
 }
 /* fin animation logo */
 
+.abecedaire{
+	z-index: 10;
+}
+
 .abecedaire:hover p{
   letter-spacing: 0.3rem;
   transition: 0.5s ease;
 }
 
 /* Début menu burger */
+.burger-menu{
+		z-index: 50;
+}
+
 .menu-toggle {
   display: inline-block;
 }
@@ -82,7 +95,7 @@ margin: 0.3em 0px 0px 1em;
 .menu-toggle:hover path{
   fill: transparent;
   stroke-width: 2;
-  stroke: #306000;
+  stroke: var(--main-color);
   stroke-dasharray: 30;
   stroke-dashoffset: 30;
   animation-duration : 3s;
@@ -106,11 +119,15 @@ margin: 0.3em 0px 0px 1em;
   position: absolute;
   top: 0;
   bottom: 0;
-  right : 100vw;
+  left : 100vw;
   height: 100%;
   transition: all 0.5s ease;
   z-index: 999;
   position: fixed;
+}
+
+::marker {
+    color: transparent;
 }
 
 .main-menu .menu-close {
@@ -137,21 +154,21 @@ margin: 0.3em 0px 0px 1em;
   padding: .75em 15px;
   line-height: 1em;
   font-size: 1em;
-  color: #F4EFE5;
+  color: var(--secondary-color);
   text-decoration: none;
   letter-spacing: .3rem;
 }
 
 .main-menu a:hover {
   -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: #F4EFE5;
+  -webkit-text-stroke-color: var(--secondary-color);
   color:rgba(0, 0, 0, 0);
   letter-spacing: .5rem;
   transition: 0.5s ease;
 }
 
 .main-menu:target{
-  right: 0;
+  left: 0;
 }
 
 .main-menu:target .menu-close {
@@ -202,13 +219,13 @@ margin: 0.3em 0px 0px 1em;
 
 h1.titre:hover {
   -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: #306000;
-  color:#fff;
+  -webkit-text-stroke-color: var(--main-color);
+  color: var(--secondary-color);
   transition: 0.5s ease;
 }
 
 .titreparagraphe{
-  width: 400px;
+  width: 30%;
   height: fit-content;
   margin-bottom: 5px;
 }
@@ -222,7 +239,7 @@ h1.titre:hover {
 .fleche path{
   fill: transparent;
   stroke-width: 2;
-  stroke: #306000;
+  stroke: var(--main-color);
   stroke-dasharray: 45;
   stroke-dashoffset: 45;
   animation-duration : 2s;
@@ -249,7 +266,7 @@ h1{
   font-size: 4rem;
   letter-spacing: .3rem;
   font-weight: 100;
-  color: #306000;
+  color: var(--main-color);
 }
 
 
@@ -258,7 +275,7 @@ p{
   font-size: 0.8rem;
   letter-spacing: .1rem;
   font-weight: 100;
-  color: #306000;
+  color: var(--main-color);
 }
 
 
@@ -282,16 +299,16 @@ p{
 h2{
   font-family: "Decovar Alpha";
   font-size: 2rem;
-  letter-spacing: .3rem;
+  letter-spacing: .1rem;
   font-weight: 100;
-  color: #306000;
+  color: var(--main-color);
 }
 
 h2.mal:hover {
   -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: #306000;
+  -webkit-text-stroke-color: var(--main-color);
   color:#fff;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
   transition: 0.5s ease;
 }
 .mal{
@@ -315,12 +332,12 @@ margin-bottom: 10px;
   font-size: 0.8rem;
   letter-spacing: .1rem;
   font-weight: 100;
-  color: #306000;
+  color: var(--main-color);
   text-decoration:none;
   text-align:center;
   padding:8px 8px;
   background-color: transparent;
-  border:1px solid #306000;
+  border:1px solid var(--main-color);
   border-radius: 50px;
   margin: 5px;
 }
@@ -345,7 +362,7 @@ h3{
   font-size: 2rem;
   letter-spacing: .3rem;
   font-weight: 50;
-  color: #306000;
+  color: var(--main-color);
   text-align: left;
   margin: 5px;
   margin-top: -15px;
@@ -367,7 +384,7 @@ h3{
   font-size: 0.8rem;
   letter-spacing: .1rem;
   font-weight: 100;
-  color: #306000;
+  color: var(--main-color);
   text-align: left;
   margin: 0;
 }
@@ -384,7 +401,7 @@ div{
  text-align: center;
  font-size: 50px;
  font-family: "decovar Alpha";
- color:#306000;
+ color: var(--main-color);
 }
 
 
@@ -531,32 +548,82 @@ display: none;
 
 
 
-/* Section 2 */
+/* footer */
 
-#attention {
+#footer {
   display: flex;
   align-items: center;
+	justify-content: center;
+	margin-top: 10vh;
+	margin-bottom: 25vh;
 }
+
+.link{
+	font-family: "Decovar Alpha";
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    font-weight: 100;
+    color: var(--main-color);
+		text-decoration: none;
+}
+
+#footer .link{
+		margin-top: 5vh;
+}
+
+#footer .link:hover {
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: var(--main-color);
+  color:#fff;
+  letter-spacing: 0.3rem;
+  transition: 0.5s ease;
+}
+
+
+/* début scroll bar */
+div#progress {
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	bottom: -50px;
+	width: 100vw;
+	height: 10px;
+	transform-origin: 0 50%;
+	transform: scaleX(0);
+	background-color: var(--main-color);
+	animation: 1s linear forwards adjust-progressbar;
+	animation-timeline: progressbar-timeline;
+	transform: translateY(-10px);
+}
+
+
+
+@keyframes adjust-progressbar {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@scroll-timeline progressbar-timeline {
+    time-range: 1s;
+		}
+/* fin scroll bar */
+
+
+
+
+
+
 
 
 /* début page lettre A */
 
 /* add custom styling to the scrollbar */
 ::-webkit-scrollbar {
-  transform: translateY(-10px);
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  width: 0px;
 }
 
 .slide {
@@ -568,7 +635,7 @@ display: none;
 }
 
 .outer-wrapper {
-  width: 311vw;
+  width: 240vw;
   height: 99vw;
   transform: rotate(-90deg) translateX(-100vh);
   transform-origin: top left;
@@ -606,7 +673,6 @@ display: none;
 .date-page-plante{
 	transform: rotate(-90deg);
 	margin: 0;
-  margin-right: 40px;
 }
 
 .nom-plante{
@@ -625,28 +691,147 @@ display: none;
 
 
 .two {
-	width: 25vw;
+	width: 50vw;
+	margin-left: -25vw;
 }
 
 .illustration-plante{
-	transform: translateX(-40vh);
+
 }
 
 .three {
-  background: #0bbaa0;
 	display: flex;
   flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+	width: 110vw;
 }
 
-.four {
-  background: #00dfdf;
-}
+
 
 @media and (max-width: 768px) {
     -webkit-overflow-scrolling: touch;
 }
 
 
+/* début animation nom-plante */
+.nom-plante path{
+  fill: transparent;
+  stroke-width: 1;
+  stroke: var(--main-color);
+  stroke-dasharray: 15;
+  stroke-dashoffset: 50;
+  animation-duration : 2s;
+ animation-name: animation-nom-plante;
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
 }
+
+.nom-plante:hover path{
+  animation: animation-nom-plante 2s ease forwards;
+}
+
+@keyframes animation-nom-plante {
+  0%
+  {
+  stroke-dashoffset: 0;
+  }
+  100%
+  {
+  stroke-dashoffset: 50;
+  }
+}
+/* fin animation nom-plante */
+
+/* hover-illustration */
+
+.illustration-plante:hover{
+	transform: translateX(15vh);
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+}
+
+
+.trois-paragraphe{
+	width:45vw;
+	height: fit-content;
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 10vw;
+}
+
+p.lieu-arnica {
+    text-align: left;
+		margin-bottom: 70px;
+		font-family: "decovar";
+		font-size: 1rem;
+		letter-spacing: .1rem;
+}
+
+.arnica-protegee {
+    width: 30vh;
+		text-align : left;
+		opacity: 50%;
+		margin: 0;
+		margin-right: 50px;
+}
+
+.cueillir-arnica {
+    width: 30vh;
+		text-align : left;
+		margin: 0;
+		opacity: 50%;
+}
+
+.photo-lettre{
+	width: 480px;
+	margin-left: 60px;
+	position: relative;
+}
+
+/* Noir et blanc */
+.photo-lettre{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.photo-lettre:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+/* Noir et blanc */
+
+.legende{
+	color:#696969;
+	transform: rotate(-90deg);
+	position: absolute;
+	bottom: -345px;
+	left: -30px;
+	z-index: 55;
+}
+
+.ellipse{
+	position: absolute;
+	z-index: 1;
+	bottom: -450px;
+	left: -80px;
+	width: 40%;
+}
+
+.photo-lettre .link:hover {
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: var(--main-color);
+  color:#fff;
+  letter-spacing: 0.3rem;
+  transition: 0.5s ease;
+}
+
+.photo-lettre .link{
+	position: absolute;
+	z-index: 55;
+	bottom: -420px;
+	right: -30px;
+}
+
+
+
+/* Fin page lettre A */
