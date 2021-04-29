@@ -3,10 +3,9 @@ html{
 }
 
 @font-face {
-  font-family: "decovar";
-  font-style: normal;
-  font-weight: 400;
-  src: url("font/DecovarAlpha-VF.subset.ttf");
+  font-family: 'Decovar';
+  src: url('font/DecovarAlpha-VF.ttf') format('woff2 supports variations'),
+       url('font/DecovarAlpha-VF.ttf') format('woff2-variations');
 }
 
 :root{
@@ -262,17 +261,31 @@ h1.titre:hover {
 }
 /* Début Animation svg fleche */
 
-h1{
-  font-family: "Decovar Alpha";
-  font-size: 4rem;
-  letter-spacing: .3rem;
-  font-weight: 100;
-  color: var(--main-color);
+h1{t-family: "Decovar";
+font-size: 4rem;
+letter-spacing: .3rem;
+color: var(--main-color);
+font-variation-settings:
+	"BLDA" 0,
+	"BLDB" 0,
+	"TRMD" 0,
+	"TRMC" 0,
+	"SKLD" 0,
+	"TRML" 0,
+	"SKLA" 0,
+	"TRMF" 0,
+	"TRMK" 0,
+	"WMX2" 0,
+	"TRMB" 0,
+	"TRMA" 0,
+	"SKLB" 0,
+	"TRMG" 0,
+	"TRME" 1000;
 }
 
 
 p{
-  font-family: "decovar";
+  font-family: "Decovar";
   font-size: 0.8rem;
   letter-spacing: .1rem;
   font-weight: 100;
@@ -830,14 +843,20 @@ p.lieu-arnica {
 	position: relative;
 }
 
+.photo{
+	width: 480px;
+	margin-left: 60px;
+	position: relative;
+}
+
 /* Noir et blanc */
-.photo-lettre{
+.photo{
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.photo-lettre:hover {
+.photo:hover {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
 }
@@ -875,14 +894,10 @@ p.lieu-arnica {
 	right: -30px;
 
 
-.retour{
-margin: 20vh;
-z-index: 5
-}
 
 h2.bouton-retour:hover {
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: #306000;
+    -webkit-text-stroke-color:var(--main-color) ;
     color: #fff;
     letter-spacing: 0.5rem;
     transition: 0.5s ease;
