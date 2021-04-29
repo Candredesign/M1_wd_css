@@ -2,12 +2,6 @@ html{
 	scroll-behavior: smooth;
 }
 
-/* @font-face {
-  font-family: "decovar";
-  font-style: normal;
-  font-weight: 400;
-  src: url("font/DecovarAlpha-VF.subset.ttf");
-} */
 
 @font-face {
   font-family: 'Decovar';
@@ -268,6 +262,7 @@ h1.titre:hover {
 }
 /* Début Animation svg fleche */
 
+
 h1{
   font-family: "Decovar";
   font-size: 4rem;
@@ -289,11 +284,10 @@ h1{
     "SKLB" 0,
     "TRMG" 0,
     "TRME" 1000;
-}
 
 
 p{
-  font-family: "decovar";
+  font-family: "Decovar";
   font-size: 0.8rem;
   letter-spacing: .1rem;
   font-weight: 100;
@@ -851,14 +845,20 @@ p.lieu-arnica {
 	position: relative;
 }
 
+.photo{
+	width: 480px;
+	margin-left: 60px;
+	position: relative;
+}
+
 /* Noir et blanc */
-.photo-lettre{
+.photo{
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.photo-lettre:hover {
+.photo:hover {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
 }
@@ -896,14 +896,10 @@ p.lieu-arnica {
 	right: -30px;
 
 
-.retour{
-margin: 20vh;
-z-index: 5
-}
 
 h2.bouton-retour:hover {
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: #306000;
+    -webkit-text-stroke-color:var(--main-color) ;
     color: #fff;
     letter-spacing: 0.5rem;
     transition: 0.5s ease;
