@@ -185,6 +185,7 @@ margin: 0.3em 0px 0px 1em;
   z-index: 998;
   cursor: default;
 }
+
 /* Fin menu burger */
 
 
@@ -567,9 +568,13 @@ display: none;
 		text-decoration: none;
 }
 
+
 #footer .link{
 		margin-top: 5vh;
 }
+
+/* début page lettre A */
+
 
 #footer .link:hover {
   -webkit-text-stroke: 1px;
@@ -593,7 +598,6 @@ div#progress {
 	background-color: var(--main-color);
 	animation: 1s linear forwards adjust-progressbar;
 	animation-timeline: progressbar-timeline;
-	transform: translateY(-10px);
 }
 
 
@@ -603,7 +607,7 @@ div#progress {
         transform: scaleX(0);
     }
     to {
-        transform: scaleX(1);
+        transform: scaleX(1.05);
     }
 }
 
@@ -716,8 +720,7 @@ div#progress {
 .nom-plante path{
   fill: transparent;
   stroke-width: 1;
-  stroke: var(--main-color);
-  stroke-dasharray: 15;
+  stroke: var(--main-color);  stroke-dasharray: 15;
   stroke-dashoffset: 50;
   animation-duration : 2s;
  animation-name: animation-nom-plante;
@@ -774,6 +777,46 @@ p.lieu-arnica {
 		margin-right: 50px;
 }
 
+
+}
+
+@keyframes animation-nom-plante {
+  0%
+  {
+  stroke-dashoffset: 0;
+  }
+  100%
+  {
+  stroke-dashoffset: 50;
+  }
+}
+/* fin animation nom-plante */
+
+
+.trois-paragraphe{
+	width:45vw;
+	height: fit-content;
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 10vw;
+}
+
+p.lieu-arnica {
+    text-align: left;
+		margin-bottom: 70px;
+		font-family: "decovar";
+		font-size: 1rem;
+		letter-spacing: .1rem;
+}
+
+.arnica-protegee {
+    width: 30vh;
+		text-align : left;
+		opacity: 50%;
+		margin: 0;
+		margin-right: 50px;
+}
+
 .cueillir-arnica {
     width: 30vh;
 		text-align : left;
@@ -799,7 +842,6 @@ p.lieu-arnica {
 	filter: grayscale(0);
 }
 /* Noir et blanc */
-
 .legende{
 	color:#696969;
 	transform: rotate(-90deg);
@@ -817,19 +859,33 @@ p.lieu-arnica {
 	width: 40%;
 }
 
+
 .photo-lettre .link:hover {
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: var(--main-color);
-  color:#fff;
   letter-spacing: 0.3rem;
   transition: 0.5s ease;
 }
 
 .photo-lettre .link{
 	position: absolute;
+	color: var(--main-color);
 	z-index: 55;
 	bottom: -420px;
 	right: -30px;
+
+
+.retour{
+margin: 20vh;
+z-index: 5
+}
+
+h2.bouton-retour:hover {
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #306000;
+    color: #fff;
+    letter-spacing: 0.5rem;
+    transition: 0.5s ease;
 }
 
 
